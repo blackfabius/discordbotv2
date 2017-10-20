@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-const size    = process.env.BOT_COLORS;
+const size    = env.BOT_COLORS;
 const rainbow = new Array(size);
 
 for (var i=0; i<size; i++) {
@@ -21,11 +21,11 @@ function sin_to_hex(i, phase) {
 }
 
 let place = 0;
-const servers = process.env.BOT_SERVER;
+const servers = env.BOT_SERVER;
 
 function changeColor() {
   for (let index = 0; index < servers.length; ++index) {		
-    client.guilds.get(servers[index]).roles.find('name', process.env.BOT_ROLE).setColor(rainbow[place])
+    client.guilds.get(servers[index]).roles.find('name', env.BOT_ROLE).setColor(rainbow[place])
 		.catch(console.error);
 		
     if(config.logging){
@@ -41,8 +41,8 @@ function changeColor() {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`);
-  if(process.env.BOT_SPEED < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
-  setInterval(changeColor, process.env.BOT_SPEED);
+  if(env.BOT_SPEED < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
+  setInterval(changeColor, env.BOT_SPEED);
 }););
 
 
