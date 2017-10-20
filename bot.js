@@ -9,7 +9,7 @@ const client = new Discord.Client();
  
  client.on('message', message => {
      if (message.content === 'process.env.BOT_MESSAGE') {
-     	message.reply('process.env.BOT_MESSAGEANWSER');
+     	message.reply('process.env.BOT_AWNSER');
    	}
  });
  
