@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+
+client.login(process.env.BOT_TOKEN);
 
 
 const size    = env.BOT_COLORS;
@@ -47,4 +47,4 @@ client.on('ready', () => {
 
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+
