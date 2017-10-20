@@ -43,7 +43,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`);
   if(env.BOT_SPEED < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
   setInterval(changeColor, env.BOT_SPEED);
-}););
+});
 
 
 // THIS  MUST  BE  THIS  WAY
