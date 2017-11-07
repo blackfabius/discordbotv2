@@ -12,7 +12,7 @@ client.on('message', message => {
      	message.reply(process.env.a2);
 
 client.on('message', message => {
-     if (message.content === process.env.!+q3) 
+     if (message.content === process.env.q3) 
      	message.reply(process.env.a3);
    	}
  });
